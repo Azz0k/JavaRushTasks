@@ -49,10 +49,10 @@ public class Solution {
 
         @Override
         public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+            mother = (Person)in.readObject();
+            father = (Person)in.readObject();
             firstName = (String) in.readObject();
             lastName = (String) in.readObject();
-            father = (Person)in.readObject();
-            mother = (Person)in.readObject();
             age = in.readInt();
             children = (List)in.readObject();
         }
